@@ -239,7 +239,7 @@ SADECE JSON yanıt ver, başka hiçbir şey yazma:
 {"toplam_puan":<0-100>,"kriterler":[{"ad":"Dil ve Üslup","puan":<0-20>,"max":20,"yorum":"<Türkçe>"},{"ad":"Kelime Sınırı","puan":<0-15>,"max":15,"yorum":"<Türkçe>"},{"ad":"Başlık Uyumu","puan":<0-10>,"max":10,"yorum":"<Türkçe>"},{"ad":"Yazım ve Noktalama","puan":<0-15>,"max":15,"yorum":"<Türkçe>"},{"ad":"İçerik Özgünlüğü","puan":<0-20>,"max":20,"yorum":"<Türkçe>"},{"ad":"Etik Sınırlar","puan":<0-20>,"max":20,"yorum":"<Türkçe>"}],"genel_degerlendirme":"<2-3 cümle>","gelistirme_onerileri":["<öneri1>","<öneri2>","<öneri3>"]}`;
 
   try{
-    const r=await fetch('/api/evaluate',{
+    const r=await fetch('/evaluate',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({author:a1,title:ti,type:tp,text:txt,wordCount:wc})

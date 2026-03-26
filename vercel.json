@@ -1,10 +1,5 @@
 {
   "version": 2,
-  "functions": {
-    "evaluate.js": {
-      "runtime": "@vercel/node@3"
-    }
-  },
   "routes": [
     { "src": "/api/evaluate", "dest": "/evaluate.js" },
     { "src": "/(.*)", "dest": "/index.html" }
